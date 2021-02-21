@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#container{
+    display: flex;
+    width: 1000px;
+    height:800px;
+    margin: auto;
+    /* border: 1px solid black; */
+}
+.calendar{
+    flex: 1 1 auto;
+    width: 80%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+.todo.hid{
+    display: none;
+    flex: 0 1 200px;
+    width: 20%px;
+    height: 100%px;
+}
+.todo{
+    flex: 0 1 200px;
+    width: 20%px;
+    height: 100%px;
+}
+.topView__month{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.month__current{
+    display: inline-table;
+    width: 500px;
+    height:20px
+}
+.topView__day{
+    display: inline-table;
+    width: 100%;
+    height: 20px;
+    /* border: 1px solid black; */
+}
+.topView span{
+    display: inline-block;
+    width: 14.0%;
+    height: 20px;
+    border: 1px solid black;
+
+}
+.dates{
+    display: inline-table;
+    width: 100%;
+    height: 80%;
+}
+/* .dates span{
+    display: inline-block;
+    width: 14%;
+    height: 20%;
+    border: 1px solid black;
+
+    border: 1px solid black;
+
+} */
+.dates button{
+    display: inline-block;
+    /* display: flex; */
+    vertical-align: top;
+    width: 14.2857%;
+    height: 20%;
+    border: 1px solid black;
+    text-align: left;
+    background: none;
+    padding-top: 0;
+}
+button.cur{
+    background: rgb(248, 234, 228);
+}
+button div{
+    height: 110px;
+    width: 100%;
+}
+p{
+    text-align: left;
+    /* margin-bottom: 100px; */
+}
+
