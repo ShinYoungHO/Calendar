@@ -1,15 +1,23 @@
 *{
     padding: 0;
     margin: 0;
+    /* overflow: hidden; */
 }
+
 #container{
+    overflow: hidden;
     display: flex;
     width: 1000px;
-    height:800px;
+    height:700px;
     margin: auto;
+    /* overflow: hidden; */
     /* border: 1px solid black; */
 }
+button:hover {
+    background-color: rgb(174, 255, 201);
+  }
 .calendar{
+    overflow: hidden;
     flex: 1 1 auto;
     width: 80%;
     height: 100%;
@@ -18,13 +26,14 @@
 .todo.hid{
     display: none;
     flex: 0 1 200px;
-    width: 20%px;
-    height: 100%px;
+    width: 20%;
+    height: 100%;
 }
 .todo{
     flex: 0 1 200px;
-    width: 20%px;
-    height: 100%px;
+    width: 20%;
+    height: 100%;
+    padding: 50px 0 0 10px;
 }
 .topView__month{
     text-align: center;
@@ -33,8 +42,21 @@
 }
 .month__current{
     display: inline-table;
-    width: 500px;
-    height:20px
+    width: 300px;
+    height:50px;
+    font-size: 30px;
+    border-radius: 10px;
+    outline: none;
+    background: none;
+}
+.month__prev,.month__next{
+    width: 50px;
+    height:50px;
+    font-size: 30px;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    background: none;
 }
 .topView__day{
     display: inline-table;
@@ -68,7 +90,7 @@
     /* display: flex; */
     vertical-align: top;
     width: 14.2857%;
-    height: 20%;
+    height: 13%;
     border: 1px solid black;
     text-align: left;
     background: none;
@@ -86,3 +108,53 @@ p{
     /* margin-bottom: 100px; */
 }
 
+.calendar__dateList{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    /* display: none; */
+}
+
+
+
+
+
+
+.wrap { /*감싸는 레이어에 포지션 속성을 잡아주는 게 필수!(relative, absolute, fixed 중 택1*/ 
+    /* position:relative;  */
+    /* width:500px;  */
+    /* height:500px;  */
+    /* background:#F66;  */
+    /* text-align:center;  */
+    /* line-height:100px;  */
+    /* margin:0 auto;   */
+    /* color:#000;  */
+    /* font-size:12px;  */
+}
+.over { 
+    
+    position:absolute; 
+    top:0px; 
+    left:0px;
+    /* 위에 올라가는 레이어의 포지션은 top, bottom 둘 중 하나, left, right 둘 중 하나의 속성을 선택하여 잡아준다.  */
+    width:100%;
+    height:100%; 
+    background:rgba(255, 255, 255, 0.95); 
+    text-align:center; 
+    line-height:300px;
+}
+.over span{
+    overflow-y: scroll;
+
+    height: 300px;
+    width: 300px;
+}
+ul{
+    display: inline-block;
+}
+li{
+    height: 30px;
+    width: 100px;
+    background: rgb(253, 229, 229);
+    border: 1px solid black;
+}
